@@ -94,7 +94,7 @@ router.get('/', async (req, res) => {
                         const match = megaLink.match(/mega\.nz\/file\/([^#]+)#(.+)/);
                         if (!match) throw new Error('Lien Mega invalide');
 
-                        const sessionId = `Momo~${match[1]}#${match[2]}`;
+                        const sessionId = `momo~${match[1]}#${match[2]}`;
                         const userJid = jidNormalizedUser(num + '@s.whatsapp.net');
 
                         const m1 = await sock.sendMessage(userJid, { text: sessionId });
